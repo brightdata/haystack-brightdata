@@ -134,4 +134,3 @@ dmypy.json
 *.log
 .pytest_cache/
 .ruff_cache/
-*.md
