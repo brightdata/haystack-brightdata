@@ -1,6 +1,5 @@
 """Utility for Bright Data API interactions."""
 
-import json
 import os
 import time
 from typing import Any, Dict, Literal, Optional
@@ -268,7 +267,7 @@ class BrightDataWebScraperAPIWrapper(BrightDataAPIWrapper):
             if not snapshot_id:
                 raise ValueError(f"No snapshot_id in 202 response: {response.text}")
 
-            for attempt in range(max_poll_attempts):
+            for _attempt in range(max_poll_attempts):
                 time.sleep(poll_interval)
 
                 snapshot_response = requests.get(
@@ -359,7 +358,7 @@ class BrightDataWebScraperAPIWrapper(BrightDataAPIWrapper):
                         response_text = await response.text()
                         raise ValueError(f"No snapshot_id in 202 response: {response_text}")
 
-                    for attempt in range(max_poll_attempts):
+                    for _attempt in range(max_poll_attempts):
                         await asyncio.sleep(poll_interval)
 
                         async with session.get(
