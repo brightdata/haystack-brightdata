@@ -63,9 +63,7 @@ class BrightDataSERP:
         """Initialize the BrightDataSERP component."""
         # Initialize API wrapper with optional API key
         if bright_data_api_key:
-            self.api_wrapper = BrightDataSERPAPIWrapper(
-                bright_data_api_key=bright_data_api_key
-            )
+            self.api_wrapper = BrightDataSERPAPIWrapper(bright_data_api_key=bright_data_api_key)
         else:
             self.api_wrapper = BrightDataSERPAPIWrapper()
 

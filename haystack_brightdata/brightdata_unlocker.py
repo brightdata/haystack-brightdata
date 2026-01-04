@@ -60,9 +60,7 @@ class BrightDataUnlocker:
         """Initialize the BrightDataUnlocker component."""
         # Initialize API wrapper with optional API key
         if bright_data_api_key:
-            self.api_wrapper = BrightDataUnlockerAPIWrapper(
-                bright_data_api_key=bright_data_api_key
-            )
+            self.api_wrapper = BrightDataUnlockerAPIWrapper(bright_data_api_key=bright_data_api_key)
         else:
             self.api_wrapper = BrightDataUnlockerAPIWrapper()
 

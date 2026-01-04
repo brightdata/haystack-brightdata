@@ -278,9 +278,7 @@ DATASETS: List[Dict[str, Any]] = [
 # Dataset mappings for quick lookups
 DATASET_MAPPING: Dict[str, str] = {d["id"]: d["dataset_id"] for d in DATASETS}
 DATASET_INPUTS: Dict[str, List[str]] = {d["id"]: d["inputs"] for d in DATASETS}
-DATASET_DEFAULTS: Dict[str, Dict[str, str]] = {
-    d["id"]: d.get("defaults", {}) for d in DATASETS
-}
+DATASET_DEFAULTS: Dict[str, Dict[str, str]] = {d["id"]: d.get("defaults", {}) for d in DATASETS}
 DATASET_FIXED_VALUES: Dict[str, Dict[str, str]] = {
     d["id"]: d.get("fixed_values", {}) for d in DATASETS
 }
